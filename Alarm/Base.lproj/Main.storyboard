@@ -55,6 +55,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="JFD-ea-QGa">
                             <color key="tintColor" red="0.97254901959999995" green="0.95294117649999999" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="YNk-pU-WPu" kind="presentation" id="1HQ-NO-MyM"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -64,6 +67,89 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="661.60000000000002" y="-655.32233883058473"/>
+        </scene>
+        <!--Add Alarm View Controller-->
+        <scene sceneID="25A-6O-oLm">
+            <objects>
+                <viewController id="YNk-pU-WPu" customClass="AddAlarmViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jfs-Hd-EhI"/>
+                        <viewControllerLayoutGuide type="bottom" id="CgM-F9-5dg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9bG-wc-IDF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DVA-nT-Ktd" userLabel="Header View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Alarm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfX-Dh-CeZ">
+                                        <rect key="frame" x="147" y="22" width="80" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbR-ub-5nv">
+                                        <rect key="frame" x="8" y="22" width="48" height="30"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="0.97254901959999995" green="0.95294117649999999" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="YNk-pU-WPu" eventType="touchUpInside" id="KyB-uG-HuE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eck-aO-SfG">
+                                        <rect key="frame" x="333" y="22" width="34" height="30"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" red="0.97254901959999995" green="0.95294117649999999" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="mbR-ub-5nv" secondAttribute="bottom" constant="8" id="18J-uP-Av8"/>
+                                    <constraint firstAttribute="bottom" secondItem="Eck-aO-SfG" secondAttribute="bottom" constant="8" id="6DT-3p-QFR"/>
+                                    <constraint firstItem="RfX-Dh-CeZ" firstAttribute="centerX" secondItem="DVA-nT-Ktd" secondAttribute="centerX" id="7pm-6L-iLc"/>
+                                    <constraint firstAttribute="bottom" secondItem="RfX-Dh-CeZ" secondAttribute="bottom" constant="8" id="KYg-TC-CQ6"/>
+                                    <constraint firstAttribute="height" constant="60" id="cgj-4Z-phG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Eck-aO-SfG" secondAttribute="trailing" constant="8" id="pUM-fa-0XV"/>
+                                    <constraint firstItem="RfX-Dh-CeZ" firstAttribute="centerY" secondItem="mbR-ub-5nv" secondAttribute="centerY" id="qoM-Tz-5ds"/>
+                                    <constraint firstItem="mbR-ub-5nv" firstAttribute="leading" secondItem="DVA-nT-Ktd" secondAttribute="leading" constant="8" id="xu7-Me-2UJ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="va0-zK-LQa" userLabel="Line View">
+                                <rect key="frame" x="0.0" y="60" width="375" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="O1o-Na-dYQ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="trq-Iv-niC" userLabel="Alarm Actions Container View">
+                                <rect key="frame" x="0.0" y="61" width="375" height="606"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DVA-nT-Ktd" secondAttribute="trailing" id="0PF-Sx-UTK"/>
+                            <constraint firstItem="trq-Iv-niC" firstAttribute="top" secondItem="va0-zK-LQa" secondAttribute="bottom" id="4ZP-DX-dJa"/>
+                            <constraint firstItem="DVA-nT-Ktd" firstAttribute="top" secondItem="9bG-wc-IDF" secondAttribute="top" id="5Gg-Ah-eaQ"/>
+                            <constraint firstItem="trq-Iv-niC" firstAttribute="leading" secondItem="9bG-wc-IDF" secondAttribute="leading" id="TGp-jQ-nXX"/>
+                            <constraint firstItem="DVA-nT-Ktd" firstAttribute="leading" secondItem="9bG-wc-IDF" secondAttribute="leading" id="Ul3-JQ-B1e"/>
+                            <constraint firstAttribute="trailing" secondItem="va0-zK-LQa" secondAttribute="trailing" id="Ww1-at-TWo"/>
+                            <constraint firstItem="va0-zK-LQa" firstAttribute="leading" secondItem="9bG-wc-IDF" secondAttribute="leading" id="bRX-Pp-yTX"/>
+                            <constraint firstItem="va0-zK-LQa" firstAttribute="top" secondItem="DVA-nT-Ktd" secondAttribute="bottom" id="f8n-Bu-PFi"/>
+                            <constraint firstAttribute="trailing" secondItem="trq-Iv-niC" secondAttribute="trailing" id="nLO-xH-Atd"/>
+                            <constraint firstItem="CgM-F9-5dg" firstAttribute="top" secondItem="trq-Iv-niC" secondAttribute="bottom" id="wsV-5f-Zrk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_alarmActionContainerView" destination="trq-Iv-niC" id="yce-6Y-ll1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pag-r9-nzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1384.8" y="-655.32233883058473"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cVZ-Y4-Ojf">
