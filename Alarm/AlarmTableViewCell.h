@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  AlarmTableViewCell.h
 //  Alarm
 //
 //  Created by Bursuc Andrei on 4/10/17.
@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AlarmVO.h"
 
-@interface ViewController : UIViewController
+@interface AlarmTableViewCell : UITableViewCell
 
+-(void)setupWithAlarm:(AlarmVO *)alarm;
 
 @end
-
