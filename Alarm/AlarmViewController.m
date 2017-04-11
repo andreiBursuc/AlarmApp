@@ -11,10 +11,12 @@
 #import "APIGetAlarms.h"
 #import "MBProgressHUD.h"
 #import "AddAlarmViewController.h"
+#import "EditAlarmViewController.h"
 
-@interface AlarmViewController ()<UITableViewDelegate, UITableViewDataSource,AddAlarmViewControllerDelegate>
+@interface AlarmViewController ()<UITableViewDelegate, UITableViewDataSource,AddAlarmViewControllerDelegate, EditAlarmViewControllerDelegate>
 {
     IBOutlet UITableView *_tableView;
+    IBOutlet UIBarButtonItem *_editButton;
     
     NSMutableArray * _alarmsMuttableArray;
 }
@@ -53,6 +55,20 @@
     addAlarmVC.delegate = self;
 }
 
+#pragma mark - EditAlarmViewControllerDelegate
+
+-(void)editAlarmViewControllerDidEditAlarm:(AlarmVO *)alarm
+{
+    for (AlarmVO *alarmVO in _alarmsMuttableArray) {
+        if (alarmVO.alarmID == alarm.alarmID) {
+            NSInteger index = [_alarmsMuttableArray indexOfObject:alarmVO];
+            [_alarmsMuttableArray replaceObjectAtIndex:index withObject:alarm];
+            [_tableView reloadData];
+            break;
+        }
+    }
+}
+
 #pragma mark - AddAlarmViewControllerDelegate
 
 -(void)addAlarmVC:(AddAlarmViewController *)viewController didSaveAlarm:(AlarmVO *)alarm
@@ -61,7 +77,7 @@
     [_tableView reloadData];
 }
 
-#pragma mark UITableViewDataSource
+#pragma mark - UITableViewDataSource
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -77,6 +93,8 @@
 {
     AlarmTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AlarmTableViewCell"];
     
+    cell.accessoryType = tableView.isEditing ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
+    
     [cell setupWithAlarm:_alarmsMuttableArray[indexPath.row]];
     
     return cell;
@@ -85,6 +103,41 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 50;
+}
+
+#pragma mark - UITableViewDelegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    AlarmVO *selectedAlarm = _alarmsMuttableArray[indexPath.row];
+    
+    EditAlarmViewController *editAlarmVC = (EditAlarmViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"EditAlarmViewController"];
+    editAlarmVC.alarm = selectedAlarm;
+    editAlarmVC.delegate = self;
+    
+    [self presentViewController:editAlarmVC animated:YES completion:nil];
+}
+
+#pragma mark - Actions
+
+- (IBAction)editButtonPressed:(UIButton *)sender
+{
+    if (sender.tag == 1) {
+        [_editButton setTitle:@"Done"];
+        [_tableView setEditing:YES animated:YES];
+        sender.tag = 999;
+        [_tableView reloadData];
+        return;
+    }
+    
+    if (sender.tag == 999) {
+        [_editButton setTitle:@"Edit"];
+        [_tableView setEditing:NO animated:YES];
+        sender.tag = 1;
+        [_tableView reloadData];
+    }
+
+
 }
 
 #pragma mark - Requests

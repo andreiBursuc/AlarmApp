@@ -27,6 +27,9 @@
     _alarmLabel.text = alarm.alarmLabel;
     
     [_alarmEnabledSwitch setOn:alarm.enabled];
+    
+    BOOL isInEditMode = self.accessoryType == UITableViewCellAccessoryDisclosureIndicator;
+    _alarmEnabledSwitch.hidden = isInEditMode;
 }
 
 @end
