@@ -10,8 +10,9 @@
 #import "AlarmTableViewCell.h"
 #import "APIGetAlarms.h"
 #import "MBProgressHUD.h"
+#import "AddAlarmViewController.h"
 
-@interface AlarmViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface AlarmViewController ()<UITableViewDelegate, UITableViewDataSource,AddAlarmViewControllerDelegate>
 {
     IBOutlet UITableView *_tableView;
     
@@ -42,6 +43,22 @@
       @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     
     [_tableView registerNib:[UINib nibWithNibName:@"AlarmTableViewCell" bundle:nil]forCellReuseIdentifier:@"AlarmTableViewCell"];
+}
+
+#pragma mark - Navigation
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    AddAlarmViewController *addAlarmVC = (AddAlarmViewController *)segue.destinationViewController;
+    addAlarmVC.delegate = self;
+}
+
+#pragma mark - AddAlarmViewControllerDelegate
+
+-(void)addAlarmVC:(AddAlarmViewController *)viewController didSaveAlarm:(AlarmVO *)alarm
+{
+    [_alarmsMuttableArray addObject:alarm];
+    [_tableView reloadData];
 }
 
 #pragma mark UITableViewDataSource

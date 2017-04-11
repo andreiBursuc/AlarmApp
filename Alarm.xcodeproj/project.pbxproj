@@ -12,11 +12,11 @@
 		D6171A461E9BC39B0044C3A1 /* AlarmTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6171A441E9BC39B0044C3A1 /* AlarmTableViewCell.m */; };
 		D6171A471E9BC39B0044C3A1 /* AlarmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6171A451E9BC39B0044C3A1 /* AlarmTableViewCell.xib */; };
 		D6171A4B1E9BC7790044C3A1 /* AlarmVO.m in Sources */ = {isa = PBXBuildFile; fileRef = D6171A4A1E9BC7790044C3A1 /* AlarmVO.m */; };
-		D6171A4F1E9BCAF70044C3A1 /* APIRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6171A4E1E9BCAF70044C3A1 /* APIRequestManager.m */; };
 		D6171A561E9BD4F30044C3A1 /* APIGetAlarms.m in Sources */ = {isa = PBXBuildFile; fileRef = D6171A551E9BD4F30044C3A1 /* APIGetAlarms.m */; };
 		D6171A5D1E9BDF550044C3A1 /* AddAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6171A5C1E9BDF550044C3A1 /* AddAlarmViewController.m */; };
 		D6171A621E9BE5390044C3A1 /* AlarmActionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6171A601E9BE5390044C3A1 /* AlarmActionsViewController.m */; };
 		D6171A631E9BE5390044C3A1 /* AlarmActionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6171A611E9BE5390044C3A1 /* AlarmActionsViewController.xib */; };
+		D6676A241E9C9A000047C629 /* APICreateAlarm.m in Sources */ = {isa = PBXBuildFile; fileRef = D6676A231E9C9A000047C629 /* APICreateAlarm.m */; };
 		D69480341E9B58140047B2C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D69480331E9B58140047B2C0 /* main.m */; };
 		D69480371E9B58140047B2C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D69480361E9B58140047B2C0 /* AppDelegate.m */; };
 		D694803D1E9B58150047B2C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D694803B1E9B58150047B2C0 /* Main.storyboard */; };
@@ -56,8 +56,6 @@
 		D6171A451E9BC39B0044C3A1 /* AlarmTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlarmTableViewCell.xib; sourceTree = "<group>"; };
 		D6171A491E9BC7790044C3A1 /* AlarmVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmVO.h; sourceTree = "<group>"; };
 		D6171A4A1E9BC7790044C3A1 /* AlarmVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmVO.m; sourceTree = "<group>"; };
-		D6171A4D1E9BCAF70044C3A1 /* APIRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIRequestManager.h; sourceTree = "<group>"; };
-		D6171A4E1E9BCAF70044C3A1 /* APIRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIRequestManager.m; sourceTree = "<group>"; };
 		D6171A541E9BD4F30044C3A1 /* APIGetAlarms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIGetAlarms.h; sourceTree = "<group>"; };
 		D6171A551E9BD4F30044C3A1 /* APIGetAlarms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIGetAlarms.m; sourceTree = "<group>"; };
 		D6171A5B1E9BDF550044C3A1 /* AddAlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAlarmViewController.h; sourceTree = "<group>"; };
@@ -65,6 +63,10 @@
 		D6171A5F1E9BE5390044C3A1 /* AlarmActionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmActionsViewController.h; sourceTree = "<group>"; };
 		D6171A601E9BE5390044C3A1 /* AlarmActionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmActionsViewController.m; sourceTree = "<group>"; };
 		D6171A611E9BE5390044C3A1 /* AlarmActionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlarmActionsViewController.xib; sourceTree = "<group>"; };
+		D6676A221E9C9A000047C629 /* APICreateAlarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APICreateAlarm.h; sourceTree = "<group>"; };
+		D6676A231E9C9A000047C629 /* APICreateAlarm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APICreateAlarm.m; sourceTree = "<group>"; };
+		D6676A261E9C9AA40047C629 /* APIProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIProtocol.h; sourceTree = "<group>"; };
+		D6676A271E9C9B410047C629 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		D694802F1E9B58140047B2C0 /* Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69480331E9B58140047B2C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D69480351E9B58140047B2C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -159,10 +161,9 @@
 		D6171A501E9BCB020044C3A1 /* APIRequests */ = {
 			isa = PBXGroup;
 			children = (
-				D6171A4D1E9BCAF70044C3A1 /* APIRequestManager.h */,
-				D6171A4E1E9BCAF70044C3A1 /* APIRequestManager.m */,
-				D6171A541E9BD4F30044C3A1 /* APIGetAlarms.h */,
-				D6171A551E9BD4F30044C3A1 /* APIGetAlarms.m */,
+				D6676A261E9C9AA40047C629 /* APIProtocol.h */,
+				D6676A211E9C99E20047C629 /* GetAlarms */,
+				D6676A251E9C9A080047C629 /* CreateAlarm */,
 			);
 			name = APIRequests;
 			sourceTree = "<group>";
@@ -196,6 +197,24 @@
 			name = AlarmTableViewCell;
 			sourceTree = "<group>";
 		};
+		D6676A211E9C99E20047C629 /* GetAlarms */ = {
+			isa = PBXGroup;
+			children = (
+				D6171A541E9BD4F30044C3A1 /* APIGetAlarms.h */,
+				D6171A551E9BD4F30044C3A1 /* APIGetAlarms.m */,
+			);
+			name = GetAlarms;
+			sourceTree = "<group>";
+		};
+		D6676A251E9C9A080047C629 /* CreateAlarm */ = {
+			isa = PBXGroup;
+			children = (
+				D6676A221E9C9A000047C629 /* APICreateAlarm.h */,
+				D6676A231E9C9A000047C629 /* APICreateAlarm.m */,
+			);
+			name = CreateAlarm;
+			sourceTree = "<group>";
+		};
 		D69480261E9B58140047B2C0 = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +242,7 @@
 			children = (
 				D69480351E9B58140047B2C0 /* AppDelegate.h */,
 				D69480361E9B58140047B2C0 /* AppDelegate.m */,
+				D6676A271E9C9B410047C629 /* Constants.h */,
 				D6171A501E9BCB020044C3A1 /* APIRequests */,
 				D6171A421E9B8B9F0044C3A1 /* ViewControllers */,
 				D6171A481E9BC39F0044C3A1 /* CustomCells */,
@@ -450,10 +470,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6676A241E9C9A000047C629 /* APICreateAlarm.m in Sources */,
 				D6171A5D1E9BDF550044C3A1 /* AddAlarmViewController.m in Sources */,
 				D6171A411E9B8B940044C3A1 /* AlarmViewController.m in Sources */,
 				D69480371E9B58140047B2C0 /* AppDelegate.m in Sources */,
-				D6171A4F1E9BCAF70044C3A1 /* APIRequestManager.m in Sources */,
 				D69480341E9B58140047B2C0 /* main.m in Sources */,
 				D6171A461E9BC39B0044C3A1 /* AlarmTableViewCell.m in Sources */,
 				D6171A561E9BD4F30044C3A1 /* APIGetAlarms.m in Sources */,

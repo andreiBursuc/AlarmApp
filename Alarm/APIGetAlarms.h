@@ -7,12 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-
-typedef void(^APIManagerCompletionBlock) (id response, NSError *error);
+#import "APIProtocol.h"
 
 
 @interface APIGetAlarms : NSObject
 
--(void)startRequestWithCompletionBlock:(APIManagerCompletionBlock)completionBlock;
+-(void)startRequestWithCompletionBlock:(APICompletionBlock)completionBlock;
 
 @end

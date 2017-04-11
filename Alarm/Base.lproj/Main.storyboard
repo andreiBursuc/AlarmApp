@@ -103,6 +103,9 @@
                                         <state key="normal" title="Save">
                                             <color key="titleColor" red="0.97254901959999995" green="0.95294117649999999" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="saveButtonPressed:" destination="YNk-pU-WPu" eventType="touchUpInside" id="CYA-Ip-ZIR"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>

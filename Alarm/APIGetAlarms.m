@@ -8,13 +8,11 @@
 
 #import "APIGetAlarms.h"
 #import <AFNetworking.h>
-
-#define kAPIBaseURL  @"http://red.maxcode.net/api/clocks"
-#define kGUID  @"b8d1c2ad-621b-45a4-8446-eb3676289e82"
+#import "Constants.h"
 
 @implementation APIGetAlarms
 
--(void)startRequestWithCompletionBlock:(APIManagerCompletionBlock)completionBlock
+-(void)startRequestWithCompletionBlock:(APICompletionBlock)completionBlock
 {
     NSURL *url = [NSURL URLWithString:kAPIBaseURL];
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:url];

@@ -10,4 +10,6 @@
 
 @interface AlarmActionsViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
+
 @end

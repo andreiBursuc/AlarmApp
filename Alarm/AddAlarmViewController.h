@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AlarmVO.h"
+
+@class AddAlarmViewController;
+
+@protocol AddAlarmViewControllerDelegate <NSObject>
+
+-(void)addAlarmVC: (AddAlarmViewController *)viewController didSaveAlarm: (AlarmVO *)alarm;
+
+@end
 
 @interface AddAlarmViewController : UIViewController
+
+@property (nonatomic, weak) id <AddAlarmViewControllerDelegate> delegate;
 
 @end
