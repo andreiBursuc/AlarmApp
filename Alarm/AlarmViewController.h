@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  AlarmViewController.h
 //  Alarm
 //
 //  Created by Bursuc Andrei on 4/10/17.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface AlarmViewController : UIViewController
 
 @end
-

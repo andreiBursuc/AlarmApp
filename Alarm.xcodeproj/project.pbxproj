@@ -7,14 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AEA3584D3F0D7BA12F1F1323 /* libPods-Alarm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9312037D2CD70BE1C6DFF357 /* libPods-Alarm.a */; };
+		D6171A411E9B8B940044C3A1 /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6171A401E9B8B940044C3A1 /* AlarmViewController.m */; };
+		D6171A461E9BC39B0044C3A1 /* AlarmTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6171A441E9BC39B0044C3A1 /* AlarmTableViewCell.m */; };
+		D6171A471E9BC39B0044C3A1 /* AlarmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6171A451E9BC39B0044C3A1 /* AlarmTableViewCell.xib */; };
+		D6171A4B1E9BC7790044C3A1 /* AlarmVO.m in Sources */ = {isa = PBXBuildFile; fileRef = D6171A4A1E9BC7790044C3A1 /* AlarmVO.m */; };
+		D6171A561E9BD4F30044C3A1 /* APIGetAlarms.m in Sources */ = {isa = PBXBuildFile; fileRef = D6171A551E9BD4F30044C3A1 /* APIGetAlarms.m */; };
+		D6171A5D1E9BDF550044C3A1 /* AddAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6171A5C1E9BDF550044C3A1 /* AddAlarmViewController.m */; };
+		D6171A621E9BE5390044C3A1 /* AlarmActionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6171A601E9BE5390044C3A1 /* AlarmActionsViewController.m */; };
+		D6171A631E9BE5390044C3A1 /* AlarmActionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6171A611E9BE5390044C3A1 /* AlarmActionsViewController.xib */; };
+		D65674371E9DED0B001052C2 /* APIDeleteAlarm.m in Sources */ = {isa = PBXBuildFile; fileRef = D65674361E9DED0B001052C2 /* APIDeleteAlarm.m */; };
+		D656743D1E9DEDBE001052C2 /* DeleteAlarmRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D656743C1E9DEDBE001052C2 /* DeleteAlarmRequestManager.m */; };
+		D6676A241E9C9A000047C629 /* APICreateAlarm.m in Sources */ = {isa = PBXBuildFile; fileRef = D6676A231E9C9A000047C629 /* APICreateAlarm.m */; };
+		D6676A2F1E9D2B170047C629 /* EditAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6676A2E1E9D2B170047C629 /* EditAlarmViewController.m */; };
+		D6676A331E9D30FF0047C629 /* APIEditAlarm.m in Sources */ = {isa = PBXBuildFile; fileRef = D6676A321E9D30FF0047C629 /* APIEditAlarm.m */; };
+		D6676A371E9D37840047C629 /* EditAlarmRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6676A361E9D37840047C629 /* EditAlarmRequestManager.m */; };
 		D69480341E9B58140047B2C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D69480331E9B58140047B2C0 /* main.m */; };
 		D69480371E9B58140047B2C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D69480361E9B58140047B2C0 /* AppDelegate.m */; };
-		D694803A1E9B58140047B2C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69480391E9B58140047B2C0 /* ViewController.m */; };
 		D694803D1E9B58150047B2C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D694803B1E9B58150047B2C0 /* Main.storyboard */; };
 		D694803F1E9B58150047B2C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D694803E1E9B58150047B2C0 /* Assets.xcassets */; };
 		D69480421E9B58150047B2C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69480401E9B58150047B2C0 /* LaunchScreen.storyboard */; };
 		D694804D1E9B58150047B2C0 /* AlarmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D694804C1E9B58150047B2C0 /* AlarmTests.m */; };
 		D69480581E9B58150047B2C0 /* AlarmUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D69480571E9B58150047B2C0 /* AlarmUITests.m */; };
+		D69480661E9B5C310047B2C0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D69480651E9B5C310047B2C0 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +50,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		59C391DE63D47A16C10B4CE3 /* libPods-AlarmUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AlarmUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B18D0089E6A907616BD657C /* Pods-Alarm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alarm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Alarm/Pods-Alarm.debug.xcconfig"; sourceTree = "<group>"; };
+		9312037D2CD70BE1C6DFF357 /* libPods-Alarm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Alarm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF97536DDEC27E6418867A60 /* libPods-AlarmTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AlarmTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6171A3F1E9B8B940044C3A1 /* AlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmViewController.h; sourceTree = "<group>"; };
+		D6171A401E9B8B940044C3A1 /* AlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmViewController.m; sourceTree = "<group>"; };
+		D6171A431E9BC39B0044C3A1 /* AlarmTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmTableViewCell.h; sourceTree = "<group>"; };
+		D6171A441E9BC39B0044C3A1 /* AlarmTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmTableViewCell.m; sourceTree = "<group>"; };
+		D6171A451E9BC39B0044C3A1 /* AlarmTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlarmTableViewCell.xib; sourceTree = "<group>"; };
+		D6171A491E9BC7790044C3A1 /* AlarmVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmVO.h; sourceTree = "<group>"; };
+		D6171A4A1E9BC7790044C3A1 /* AlarmVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmVO.m; sourceTree = "<group>"; };
+		D6171A541E9BD4F30044C3A1 /* APIGetAlarms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIGetAlarms.h; sourceTree = "<group>"; };
+		D6171A551E9BD4F30044C3A1 /* APIGetAlarms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIGetAlarms.m; sourceTree = "<group>"; };
+		D6171A5B1E9BDF550044C3A1 /* AddAlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAlarmViewController.h; sourceTree = "<group>"; };
+		D6171A5C1E9BDF550044C3A1 /* AddAlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAlarmViewController.m; sourceTree = "<group>"; };
+		D6171A5F1E9BE5390044C3A1 /* AlarmActionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmActionsViewController.h; sourceTree = "<group>"; };
+		D6171A601E9BE5390044C3A1 /* AlarmActionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmActionsViewController.m; sourceTree = "<group>"; };
+		D6171A611E9BE5390044C3A1 /* AlarmActionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlarmActionsViewController.xib; sourceTree = "<group>"; };
+		D65674351E9DED0B001052C2 /* APIDeleteAlarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIDeleteAlarm.h; sourceTree = "<group>"; };
+		D65674361E9DED0B001052C2 /* APIDeleteAlarm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIDeleteAlarm.m; sourceTree = "<group>"; };
+		D656743B1E9DEDBE001052C2 /* DeleteAlarmRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteAlarmRequestManager.h; sourceTree = "<group>"; };
+		D656743C1E9DEDBE001052C2 /* DeleteAlarmRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteAlarmRequestManager.m; sourceTree = "<group>"; };
+		D6676A221E9C9A000047C629 /* APICreateAlarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APICreateAlarm.h; sourceTree = "<group>"; };
+		D6676A231E9C9A000047C629 /* APICreateAlarm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APICreateAlarm.m; sourceTree = "<group>"; };
+		D6676A261E9C9AA40047C629 /* APIProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIProtocol.h; sourceTree = "<group>"; };
+		D6676A271E9C9B410047C629 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		D6676A2D1E9D2B170047C629 /* EditAlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditAlarmViewController.h; sourceTree = "<group>"; };
+		D6676A2E1E9D2B170047C629 /* EditAlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditAlarmViewController.m; sourceTree = "<group>"; };
+		D6676A311E9D30FF0047C629 /* APIEditAlarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIEditAlarm.h; sourceTree = "<group>"; };
+		D6676A321E9D30FF0047C629 /* APIEditAlarm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIEditAlarm.m; sourceTree = "<group>"; };
+		D6676A351E9D37840047C629 /* EditAlarmRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditAlarmRequestManager.h; sourceTree = "<group>"; };
+		D6676A361E9D37840047C629 /* EditAlarmRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditAlarmRequestManager.m; sourceTree = "<group>"; };
 		D694802F1E9B58140047B2C0 /* Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69480331E9B58140047B2C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D69480351E9B58140047B2C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D69480361E9B58140047B2C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D69480381E9B58140047B2C0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D69480391E9B58140047B2C0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D694803C1E9B58150047B2C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D694803E1E9B58150047B2C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D69480411E9B58150047B2C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +96,8 @@
 		D69480531E9B58150047B2C0 /* AlarmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlarmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69480571E9B58150047B2C0 /* AlarmUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlarmUITests.m; sourceTree = "<group>"; };
 		D69480591E9B58150047B2C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D69480651E9B5C310047B2C0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		E85DD4DBA672581C7E97FB92 /* Pods-Alarm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alarm.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alarm/Pods-Alarm.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEA3584D3F0D7BA12F1F1323 /* libPods-Alarm.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +126,167 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		714A388859CE40A4F452F770 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9312037D2CD70BE1C6DFF357 /* libPods-Alarm.a */,
+				CF97536DDEC27E6418867A60 /* libPods-AlarmTests.a */,
+				59C391DE63D47A16C10B4CE3 /* libPods-AlarmUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CD1E3D73ECD62ECF408E54D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B18D0089E6A907616BD657C /* Pods-Alarm.debug.xcconfig */,
+				E85DD4DBA672581C7E97FB92 /* Pods-Alarm.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D6171A421E9B8B9F0044C3A1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D6171A3F1E9B8B940044C3A1 /* AlarmViewController.h */,
+				D6171A401E9B8B940044C3A1 /* AlarmViewController.m */,
+				D6171A5A1E9BDF1E0044C3A1 /* AddAlarmViewController */,
+				D6171A5E1E9BE50A0044C3A1 /* AlarmActionsViewController */,
+				D6676A2C1E9D2A920047C629 /* EditAlarmViewController */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D6171A481E9BC39F0044C3A1 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				D6171A641E9BE9D10044C3A1 /* AlarmTableViewCell */,
+			);
+			name = CustomCells;
+			sourceTree = "<group>";
+		};
+		D6171A4C1E9BC7800044C3A1 /* VirtualObjects */ = {
+			isa = PBXGroup;
+			children = (
+				D6171A491E9BC7790044C3A1 /* AlarmVO.h */,
+				D6171A4A1E9BC7790044C3A1 /* AlarmVO.m */,
+			);
+			name = VirtualObjects;
+			sourceTree = "<group>";
+		};
+		D6171A501E9BCB020044C3A1 /* APIRequests */ = {
+			isa = PBXGroup;
+			children = (
+				D6676A261E9C9AA40047C629 /* APIProtocol.h */,
+				D6676A301E9D30E30047C629 /* EditAlarm */,
+				D6676A211E9C99E20047C629 /* GetAlarms */,
+				D6676A251E9C9A080047C629 /* CreateAlarm */,
+				D65674381E9DED12001052C2 /* DeleteAlarm */,
+			);
+			name = APIRequests;
+			sourceTree = "<group>";
+		};
+		D6171A5A1E9BDF1E0044C3A1 /* AddAlarmViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D6171A5B1E9BDF550044C3A1 /* AddAlarmViewController.h */,
+				D6171A5C1E9BDF550044C3A1 /* AddAlarmViewController.m */,
+			);
+			name = AddAlarmViewController;
+			sourceTree = "<group>";
+		};
+		D6171A5E1E9BE50A0044C3A1 /* AlarmActionsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D6171A5F1E9BE5390044C3A1 /* AlarmActionsViewController.h */,
+				D6171A601E9BE5390044C3A1 /* AlarmActionsViewController.m */,
+				D6171A611E9BE5390044C3A1 /* AlarmActionsViewController.xib */,
+			);
+			name = AlarmActionsViewController;
+			sourceTree = "<group>";
+		};
+		D6171A641E9BE9D10044C3A1 /* AlarmTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D6171A431E9BC39B0044C3A1 /* AlarmTableViewCell.h */,
+				D6171A441E9BC39B0044C3A1 /* AlarmTableViewCell.m */,
+				D6171A451E9BC39B0044C3A1 /* AlarmTableViewCell.xib */,
+			);
+			name = AlarmTableViewCell;
+			sourceTree = "<group>";
+		};
+		D65674381E9DED12001052C2 /* DeleteAlarm */ = {
+			isa = PBXGroup;
+			children = (
+				D65674351E9DED0B001052C2 /* APIDeleteAlarm.h */,
+				D65674361E9DED0B001052C2 /* APIDeleteAlarm.m */,
+			);
+			name = DeleteAlarm;
+			sourceTree = "<group>";
+		};
+		D65674391E9DED89001052C2 /* EditAlarmManager */ = {
+			isa = PBXGroup;
+			children = (
+				D6676A351E9D37840047C629 /* EditAlarmRequestManager.h */,
+				D6676A361E9D37840047C629 /* EditAlarmRequestManager.m */,
+			);
+			name = EditAlarmManager;
+			sourceTree = "<group>";
+		};
+		D656743A1E9DED94001052C2 /* DeleteAlarmManager */ = {
+			isa = PBXGroup;
+			children = (
+				D656743B1E9DEDBE001052C2 /* DeleteAlarmRequestManager.h */,
+				D656743C1E9DEDBE001052C2 /* DeleteAlarmRequestManager.m */,
+			);
+			name = DeleteAlarmManager;
+			sourceTree = "<group>";
+		};
+		D6676A211E9C99E20047C629 /* GetAlarms */ = {
+			isa = PBXGroup;
+			children = (
+				D6171A541E9BD4F30044C3A1 /* APIGetAlarms.h */,
+				D6171A551E9BD4F30044C3A1 /* APIGetAlarms.m */,
+			);
+			name = GetAlarms;
+			sourceTree = "<group>";
+		};
+		D6676A251E9C9A080047C629 /* CreateAlarm */ = {
+			isa = PBXGroup;
+			children = (
+				D6676A221E9C9A000047C629 /* APICreateAlarm.h */,
+				D6676A231E9C9A000047C629 /* APICreateAlarm.m */,
+			);
+			name = CreateAlarm;
+			sourceTree = "<group>";
+		};
+		D6676A2C1E9D2A920047C629 /* EditAlarmViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D6676A2D1E9D2B170047C629 /* EditAlarmViewController.h */,
+				D6676A2E1E9D2B170047C629 /* EditAlarmViewController.m */,
+			);
+			name = EditAlarmViewController;
+			sourceTree = "<group>";
+		};
+		D6676A301E9D30E30047C629 /* EditAlarm */ = {
+			isa = PBXGroup;
+			children = (
+				D6676A311E9D30FF0047C629 /* APIEditAlarm.h */,
+				D6676A321E9D30FF0047C629 /* APIEditAlarm.m */,
+			);
+			name = EditAlarm;
+			sourceTree = "<group>";
+		};
+		D6676A341E9D373F0047C629 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D656743A1E9DED94001052C2 /* DeleteAlarmManager */,
+				D65674391E9DED89001052C2 /* EditAlarmManager */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		D69480261E9B58140047B2C0 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +294,8 @@
 				D694804B1E9B58150047B2C0 /* AlarmTests */,
 				D69480561E9B58150047B2C0 /* AlarmUITests */,
 				D69480301E9B58140047B2C0 /* Products */,
+				8CD1E3D73ECD62ECF408E54D /* Pods */,
+				714A388859CE40A4F452F770 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,12 +314,17 @@
 			children = (
 				D69480351E9B58140047B2C0 /* AppDelegate.h */,
 				D69480361E9B58140047B2C0 /* AppDelegate.m */,
-				D69480381E9B58140047B2C0 /* ViewController.h */,
-				D69480391E9B58140047B2C0 /* ViewController.m */,
+				D6676A271E9C9B410047C629 /* Constants.h */,
+				D6171A501E9BCB020044C3A1 /* APIRequests */,
+				D6171A421E9B8B9F0044C3A1 /* ViewControllers */,
+				D6171A481E9BC39F0044C3A1 /* CustomCells */,
+				D6171A4C1E9BC7800044C3A1 /* VirtualObjects */,
+				D6676A341E9D373F0047C629 /* Helpers */,
 				D694803B1E9B58150047B2C0 /* Main.storyboard */,
 				D694803E1E9B58150047B2C0 /* Assets.xcassets */,
 				D69480401E9B58150047B2C0 /* LaunchScreen.storyboard */,
 				D69480431E9B58150047B2C0 /* Info.plist */,
+				D69480651E9B5C310047B2C0 /* Podfile */,
 				D69480321E9B58140047B2C0 /* Supporting Files */,
 			);
 			path = Alarm;
@@ -147,9 +363,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D694805C1E9B58150047B2C0 /* Build configuration list for PBXNativeTarget "Alarm" */;
 			buildPhases = (
+				776B1C5C7C9C825055C5749F /* [CP] Check Pods Manifest.lock */,
 				D694802B1E9B58140047B2C0 /* Sources */,
 				D694802C1E9B58140047B2C0 /* Frameworks */,
 				D694802D1E9B58140047B2C0 /* Resources */,
+				A1DB26C7C804757D78F98F38 /* [CP] Embed Pods Frameworks */,
+				9133A2A9D1098643C226E0F2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,8 +465,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6171A471E9BC39B0044C3A1 /* AlarmTableViewCell.xib in Resources */,
 				D69480421E9B58150047B2C0 /* LaunchScreen.storyboard in Resources */,
 				D694803F1E9B58150047B2C0 /* Assets.xcassets in Resources */,
+				D69480661E9B5C310047B2C0 /* Podfile in Resources */,
+				D6171A631E9BE5390044C3A1 /* AlarmActionsViewController.xib in Resources */,
 				D694803D1E9B58150047B2C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,14 +490,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		776B1C5C7C9C825055C5749F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9133A2A9D1098643C226E0F2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Alarm/Pods-Alarm-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1DB26C7C804757D78F98F38 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Alarm/Pods-Alarm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D694802B1E9B58140047B2C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D694803A1E9B58140047B2C0 /* ViewController.m in Sources */,
+				D6676A241E9C9A000047C629 /* APICreateAlarm.m in Sources */,
+				D6171A5D1E9BDF550044C3A1 /* AddAlarmViewController.m in Sources */,
+				D656743D1E9DEDBE001052C2 /* DeleteAlarmRequestManager.m in Sources */,
+				D6171A411E9B8B940044C3A1 /* AlarmViewController.m in Sources */,
+				D6676A371E9D37840047C629 /* EditAlarmRequestManager.m in Sources */,
+				D65674371E9DED0B001052C2 /* APIDeleteAlarm.m in Sources */,
 				D69480371E9B58140047B2C0 /* AppDelegate.m in Sources */,
 				D69480341E9B58140047B2C0 /* main.m in Sources */,
+				D6171A461E9BC39B0044C3A1 /* AlarmTableViewCell.m in Sources */,
+				D6171A561E9BD4F30044C3A1 /* APIGetAlarms.m in Sources */,
+				D6171A4B1E9BC7790044C3A1 /* AlarmVO.m in Sources */,
+				D6676A331E9D30FF0047C629 /* APIEditAlarm.m in Sources */,
+				D6676A2F1E9D2B170047C629 /* EditAlarmViewController.m in Sources */,
+				D6171A621E9BE5390044C3A1 /* AlarmActionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +703,7 @@
 		};
 		D694805D1E9B58150047B2C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B18D0089E6A907616BD657C /* Pods-Alarm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Alarm/Info.plist;
@@ -433,6 +715,7 @@
 		};
 		D694805E1E9B58150047B2C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E85DD4DBA672581C7E97FB92 /* Pods-Alarm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Alarm/Info.plist;
@@ -507,6 +790,7 @@
 				D694805E1E9B58150047B2C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D694805F1E9B58150047B2C0 /* Build configuration list for PBXNativeTarget "AlarmTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +799,7 @@
 				D69480611E9B58150047B2C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D69480621E9B58150047B2C0 /* Build configuration list for PBXNativeTarget "AlarmUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +808,7 @@
 				D69480641E9B58150047B2C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
