@@ -32,4 +32,12 @@
     _alarmEnabledSwitch.hidden = isInEditMode;
 }
 
+- (IBAction)switchButtonPressed:(UISwitch *)sender
+{
+    if ([self.delegate respondsToSelector:@selector(alarmTableViewCell:didChangeAlarmState:)]) {
+        [self.delegate alarmTableViewCell:self didChangeAlarmState:sender.isOn];
+    }
+}
+
+
 @end

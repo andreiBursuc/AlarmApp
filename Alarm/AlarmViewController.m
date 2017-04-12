@@ -12,16 +12,22 @@
 #import "MBProgressHUD.h"
 #import "AddAlarmViewController.h"
 #import "EditAlarmViewController.h"
+#import "DeleteAlarmRequestManager.h"
+#import "EditAlarmRequestManager.h"
 
-@interface AlarmViewController ()<UITableViewDelegate, UITableViewDataSource,AddAlarmViewControllerDelegate, EditAlarmViewControllerDelegate>
+@interface AlarmViewController ()<UITableViewDelegate, UITableViewDataSource,AddAlarmViewControllerDelegate, EditAlarmViewControllerDelegate,DeleteAlarmRequestManagerDelegate, EditAlarmRequestManagerDelegate, AlarmTableViewCellDelegate>
 {
     IBOutlet UITableView *_tableView;
     IBOutlet UIBarButtonItem *_editButton;
     
     NSMutableArray * _alarmsMuttableArray;
+    AlarmVO *deletedAlarm;
 }
 
 @property(nonatomic, strong) APIGetAlarms* getAlarmsRequest;
+@property(nonatomic, strong) DeleteAlarmRequestManager *deleteAlarmRequestManager;
+@property(nonatomic, strong) EditAlarmRequestManager *editRequestManager;
+
 
 @end
 
@@ -93,6 +99,8 @@
 {
     AlarmTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AlarmTableViewCell"];
     
+    cell.delegate = self;
+    
     cell.accessoryType = tableView.isEditing ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
     
     [cell setupWithAlarm:_alarmsMuttableArray[indexPath.row]];
@@ -109,6 +117,11 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+   
+    if (tableView.editing == NO) {
+        return;
+    }
+    
     AlarmVO *selectedAlarm = _alarmsMuttableArray[indexPath.row];
     
     EditAlarmViewController *editAlarmVC = (EditAlarmViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"EditAlarmViewController"];
@@ -116,6 +129,54 @@
     editAlarmVC.delegate = self;
     
     [self presentViewController:editAlarmVC animated:YES completion:nil];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+   
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+      
+        [self startDeleteAlarmRequest:_alarmsMuttableArray[indexPath.row]];
+    }
+}
+
+#pragma mark - AlarmTableViewCellDelegate
+
+-(void)alarmTableViewCell:(AlarmTableViewCell *)cell didChangeAlarmState:(BOOL)state
+{
+    NSIndexPath * indexPath = [_tableView indexPathForCell:cell];
+    
+    AlarmVO *alarm = _alarmsMuttableArray[indexPath.row];
+    alarm.enabled = state;
+    
+    [self startEditAlarmRequest:alarm];
+}
+
+#pragma mark - DeleteAlarmRequestManagerDelegate
+
+-(void)deleteAlarmManagerDidFinishRequestWithResponse:(NSDictionary *)response
+{
+    [_tableView setEditing:NO animated:YES];
+    
+    [self startGetAlarmsRequest];
+}
+
+-(void)deleteAlarmManagerDidFinishRequestWithError:(NSError *)error
+{
+    [_tableView setEditing:NO animated:YES];
+
+    [self showError:error];
+}
+
+#pragma mark - EditAlarmRequestManagerDelegate
+
+-(void)editAlarmManagerDidFinishRequestWithResponse:(NSDictionary *)response
+{
+    [self startGetAlarmsRequest];
+}
+
+-(void)editAlarmManagerDidFinishRequestWithError:(NSError *)error
+{
+    [self showError:error];
 }
 
 #pragma mark - Actions
@@ -146,14 +207,12 @@
 {
     __weak typeof(self) weakSelf = self;
     
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-
+    [self showProgressHud];
+    
     _getAlarmsRequest = [[APIGetAlarms alloc] init];
     [_getAlarmsRequest startRequestWithCompletionBlock:^(id response, NSError *error) {
-      
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-        });
+        
+        [weakSelf hideProgressHud];
         
         if (error) {
             [weakSelf handleGetAlarmsRequestError:error];
@@ -177,7 +236,59 @@
 
 -(void)handleGetAlarmsRequestError:(NSError *)error
 {
+    [self showError:error];
+}
+
+#pragma mark - Delete Alarm
+
+-(void)startDeleteAlarmRequest:(AlarmVO *)alarm
+{
+    _deleteAlarmRequestManager = [[DeleteAlarmRequestManager alloc] init];
+    _deleteAlarmRequestManager.alarm = alarm;
+    _deleteAlarmRequestManager.delegate = self;
     
+    [_deleteAlarmRequestManager startRequest];
+}
+
+#pragma mark - Edit Alarm
+
+-(void)startEditAlarmRequest:(AlarmVO *)alarm
+{
+    _editRequestManager = [[EditAlarmRequestManager alloc] init];
+    _editRequestManager.delegate = self;
+    _editRequestManager.alarm = alarm;
+
+    [_editRequestManager startRequestWithParams:[self createParamsWithAlarm:alarm]];
+}
+
+-(NSDictionary *)createParamsWithAlarm:(AlarmVO *)alarm
+{    
+    NSString *enabledFlag = alarm.enabled ? @"true" : @"false";
+    
+    NSString *stringHour = [NSString stringWithFormat:@"%ld", (long)alarm.hour];
+    NSString *stringMin = [NSString stringWithFormat:@"%ld", (long)alarm.minutes];
+    
+    NSDictionary *params = @{@"label" : alarm.alarmLabel, @"hour" : stringHour, @"minutes": stringMin, @"enabled" : enabledFlag};
+    
+    return params;
+}
+
+#pragma mark - Request Helpers
+
+-(void)showProgressHud
+{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+}
+
+-(void)hideProgressHud
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    });
+}
+
+-(void)showError:(NSError *)error
+{
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:[error localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];

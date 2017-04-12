@@ -16,6 +16,8 @@
 		D6171A5D1E9BDF550044C3A1 /* AddAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6171A5C1E9BDF550044C3A1 /* AddAlarmViewController.m */; };
 		D6171A621E9BE5390044C3A1 /* AlarmActionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6171A601E9BE5390044C3A1 /* AlarmActionsViewController.m */; };
 		D6171A631E9BE5390044C3A1 /* AlarmActionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6171A611E9BE5390044C3A1 /* AlarmActionsViewController.xib */; };
+		D65674371E9DED0B001052C2 /* APIDeleteAlarm.m in Sources */ = {isa = PBXBuildFile; fileRef = D65674361E9DED0B001052C2 /* APIDeleteAlarm.m */; };
+		D656743D1E9DEDBE001052C2 /* DeleteAlarmRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D656743C1E9DEDBE001052C2 /* DeleteAlarmRequestManager.m */; };
 		D6676A241E9C9A000047C629 /* APICreateAlarm.m in Sources */ = {isa = PBXBuildFile; fileRef = D6676A231E9C9A000047C629 /* APICreateAlarm.m */; };
 		D6676A2F1E9D2B170047C629 /* EditAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6676A2E1E9D2B170047C629 /* EditAlarmViewController.m */; };
 		D6676A331E9D30FF0047C629 /* APIEditAlarm.m in Sources */ = {isa = PBXBuildFile; fileRef = D6676A321E9D30FF0047C629 /* APIEditAlarm.m */; };
@@ -66,6 +68,10 @@
 		D6171A5F1E9BE5390044C3A1 /* AlarmActionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmActionsViewController.h; sourceTree = "<group>"; };
 		D6171A601E9BE5390044C3A1 /* AlarmActionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmActionsViewController.m; sourceTree = "<group>"; };
 		D6171A611E9BE5390044C3A1 /* AlarmActionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlarmActionsViewController.xib; sourceTree = "<group>"; };
+		D65674351E9DED0B001052C2 /* APIDeleteAlarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIDeleteAlarm.h; sourceTree = "<group>"; };
+		D65674361E9DED0B001052C2 /* APIDeleteAlarm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIDeleteAlarm.m; sourceTree = "<group>"; };
+		D656743B1E9DEDBE001052C2 /* DeleteAlarmRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteAlarmRequestManager.h; sourceTree = "<group>"; };
+		D656743C1E9DEDBE001052C2 /* DeleteAlarmRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteAlarmRequestManager.m; sourceTree = "<group>"; };
 		D6676A221E9C9A000047C629 /* APICreateAlarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APICreateAlarm.h; sourceTree = "<group>"; };
 		D6676A231E9C9A000047C629 /* APICreateAlarm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APICreateAlarm.m; sourceTree = "<group>"; };
 		D6676A261E9C9AA40047C629 /* APIProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIProtocol.h; sourceTree = "<group>"; };
@@ -175,6 +181,7 @@
 				D6676A301E9D30E30047C629 /* EditAlarm */,
 				D6676A211E9C99E20047C629 /* GetAlarms */,
 				D6676A251E9C9A080047C629 /* CreateAlarm */,
+				D65674381E9DED12001052C2 /* DeleteAlarm */,
 			);
 			name = APIRequests;
 			sourceTree = "<group>";
@@ -206,6 +213,33 @@
 				D6171A451E9BC39B0044C3A1 /* AlarmTableViewCell.xib */,
 			);
 			name = AlarmTableViewCell;
+			sourceTree = "<group>";
+		};
+		D65674381E9DED12001052C2 /* DeleteAlarm */ = {
+			isa = PBXGroup;
+			children = (
+				D65674351E9DED0B001052C2 /* APIDeleteAlarm.h */,
+				D65674361E9DED0B001052C2 /* APIDeleteAlarm.m */,
+			);
+			name = DeleteAlarm;
+			sourceTree = "<group>";
+		};
+		D65674391E9DED89001052C2 /* EditAlarmManager */ = {
+			isa = PBXGroup;
+			children = (
+				D6676A351E9D37840047C629 /* EditAlarmRequestManager.h */,
+				D6676A361E9D37840047C629 /* EditAlarmRequestManager.m */,
+			);
+			name = EditAlarmManager;
+			sourceTree = "<group>";
+		};
+		D656743A1E9DED94001052C2 /* DeleteAlarmManager */ = {
+			isa = PBXGroup;
+			children = (
+				D656743B1E9DEDBE001052C2 /* DeleteAlarmRequestManager.h */,
+				D656743C1E9DEDBE001052C2 /* DeleteAlarmRequestManager.m */,
+			);
+			name = DeleteAlarmManager;
 			sourceTree = "<group>";
 		};
 		D6676A211E9C99E20047C629 /* GetAlarms */ = {
@@ -247,8 +281,8 @@
 		D6676A341E9D373F0047C629 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				D6676A351E9D37840047C629 /* EditAlarmRequestManager.h */,
-				D6676A361E9D37840047C629 /* EditAlarmRequestManager.m */,
+				D656743A1E9DED94001052C2 /* DeleteAlarmManager */,
+				D65674391E9DED89001052C2 /* EditAlarmManager */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -511,8 +545,10 @@
 			files = (
 				D6676A241E9C9A000047C629 /* APICreateAlarm.m in Sources */,
 				D6171A5D1E9BDF550044C3A1 /* AddAlarmViewController.m in Sources */,
+				D656743D1E9DEDBE001052C2 /* DeleteAlarmRequestManager.m in Sources */,
 				D6171A411E9B8B940044C3A1 /* AlarmViewController.m in Sources */,
 				D6676A371E9D37840047C629 /* EditAlarmRequestManager.m in Sources */,
+				D65674371E9DED0B001052C2 /* APIDeleteAlarm.m in Sources */,
 				D69480371E9B58140047B2C0 /* AppDelegate.m in Sources */,
 				D69480341E9B58140047B2C0 /* main.m in Sources */,
 				D6171A461E9BC39B0044C3A1 /* AlarmTableViewCell.m in Sources */,

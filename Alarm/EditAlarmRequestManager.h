@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 #import "AlarmVO.h"
 
 @protocol EditAlarmRequestManagerDelegate <NSObject>
